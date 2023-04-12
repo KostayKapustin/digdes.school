@@ -19,7 +19,7 @@ public class JavaSchoolStarter {
     public List<Map<String, Object>> execute(String request) throws Exception {
         String requestToUpperCase = request.toUpperCase();
         String[] team = requestToUpperCase.split(" ");
-        String dataWithoutSpaces = request.replaceAll("\\s+", "").replaceAll("'", "").
+        String dataWithoutSpaces = request.replaceAll("\\s+", "‘").replaceAll("", "").
                 replaceAll("%", "");
         String[] commaSeparatedData = dataWithoutSpaces.split(",");
         if(!team[0].equals("SELECT")) {
