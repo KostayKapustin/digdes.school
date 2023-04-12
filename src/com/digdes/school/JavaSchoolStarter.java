@@ -440,7 +440,7 @@ public class JavaSchoolStarter {
     private void validationColumnNames(String request, String dataWithoutSpaces) throws Exception {
         StringBuilder extraColumns = new StringBuilder();
         String toUpperCaseRequest = request.toUpperCase();
-        Pattern pattern = Pattern.compile("'(.*?)'");
+        Pattern pattern = Pattern.compile("‘(.*?)‘");
         List<String> matcher = pattern.matcher(toUpperCaseRequest)
                 .results()
                 .map(mr -> mr.group(1)).toList();
